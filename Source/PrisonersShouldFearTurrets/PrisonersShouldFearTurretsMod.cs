@@ -85,6 +85,11 @@ namespace PrisonersShouldFearTurrets
                 listing_Standard.Label("PSFT.nothing.label".Translate());
             }
 
+            if (ModLister.IdeologyInstalled)
+            {
+                listing_Standard.CheckboxLabeled("PSFT.applyterror.label".Translate(), ref Settings.ApplyTerror);
+            }
+
             listing_Standard.End();
         }
     }

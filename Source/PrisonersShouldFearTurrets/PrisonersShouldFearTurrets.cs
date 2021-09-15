@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace PrisonersShouldFearTurrets
@@ -7,8 +8,11 @@ namespace PrisonersShouldFearTurrets
     [StaticConstructorOnStartup]
     public class PrisonersShouldFearTurrets
     {
+        public static ThoughtDef ObservedTurretDef;
+
         static PrisonersShouldFearTurrets()
         {
+            ObservedTurretDef = DefDatabase<ThoughtDef>.GetNamedSilentFail("ObservedTurret");
             var harmony = new Harmony("Mlie.PrisonersShouldFearTurrets");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }

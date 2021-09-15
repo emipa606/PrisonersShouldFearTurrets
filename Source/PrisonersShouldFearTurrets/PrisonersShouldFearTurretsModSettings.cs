@@ -9,6 +9,7 @@ namespace PrisonersShouldFearTurrets
     {
         public bool AppliesForPrisoners = true;
         public bool AppliesForSlaves;
+        public bool ApplyTerror;
         public bool OwnDoor;
         public bool VerboseLogging;
 
@@ -18,6 +19,7 @@ namespace PrisonersShouldFearTurrets
             Scribe_Values.Look(ref VerboseLogging, "VerboseLogging");
             Scribe_Values.Look(ref AppliesForPrisoners, "AppliesForPrisoners", true);
             Scribe_Values.Look(ref AppliesForSlaves, "AppliesForSlaves");
+            Scribe_Values.Look(ref ApplyTerror, "ApplyTerror");
             Scribe_Values.Look(ref OwnDoor, "OwnDoor");
         }
     }

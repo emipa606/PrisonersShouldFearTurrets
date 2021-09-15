@@ -1,4 +1,7 @@
 # Changelog for PrisonersShouldFearTurrets
 
+1.0.1.0 - Turrets can now give terror to slaves
+
+
 1.0.0.0 - First publish
 

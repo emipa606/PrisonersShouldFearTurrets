@@ -2,6 +2,8 @@
 <LanguageData>
   <PSFT.forprisoners.label>Applies to prisoners</PSFT.forprisoners.label>
   <PSFT.forslaves.label>Applies to slaves</PSFT.forslaves.label>
+  <PSFT.applyterror.label>Turrets applies terror to slaves</PSFT.applyterror.label>
+  <PSFT.applyterror.description>When slaves sees an active turret they will get terror thoughts and this makes suppression last longer</PSFT.applyterror.description>
   <PSFT.nothing.label>You should select one option since the mod will not do anything otherwise</PSFT.nothing.label>
   <PSFT.logging.label>Enable verbose logging</PSFT.logging.label>
   <PSFT.logging.tooltip>Shows verbose logging, for finding errors</PSFT.logging.tooltip>
