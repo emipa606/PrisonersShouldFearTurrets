@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PSFT.forprisoners.label>Applies to prisoners</PSFT.forprisoners.label>
+  <PSFT.forslaves.label>Applies to slaves</PSFT.forslaves.label>
+  <PSFT.nothing.label>You should select one option since the mod will not do anything otherwise</PSFT.nothing.label>
+  <PSFT.logging.label>Enable verbose logging</PSFT.logging.label>
+  <PSFT.logging.tooltip>Shows verbose logging, for finding errors</PSFT.logging.tooltip>
+  <PSFT.version.label>Installed mod-version: {0}</PSFT.version.label>
+</LanguageData>
