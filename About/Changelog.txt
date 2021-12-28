@@ -1,5 +1,8 @@
 # Changelog for PrisonersShouldFearTurrets
 
+1.0.2.0 - Updated VersionFromManifest-file to not get the 'loading is already in progress' error with some mods
+
+
 1.0.1.0 - Turrets can now give terror to slaves
 
 

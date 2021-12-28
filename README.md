@@ -6,12 +6,13 @@
 Escaping prisoners will now get fired upon by turrets. 
 
 In 1.3 rebelling slaves will also be shot, selectable in the options.
+Turrets can also give terror to slaves to keep supression levels.
 	
 ![Image](https://i.imgur.com/O0IIlYj.png)
 
 Since modding is just a hobby for me I expect no donations to keep modding. If you still want to show your support you can gift me anything from my https://store.steampowered.com/wishlist/id/Mlie]Wishlist or buy me a cup of tea.
 
-https://ko-fi.com/G2G55DDYD]![Image](https://i.ibb.co/VWJJb3w/Support-Me-dark-2x.png)
+https://ko-fi.com/G2G55DDYD]![Image](https://i.imgur.com/Utx6OIH.png)
 
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
