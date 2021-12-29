@@ -3,35 +3,34 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace PrisonersShouldFearTurrets
+namespace PrisonersShouldFearTurrets;
+
+[StaticConstructorOnStartup]
+public class PrisonersShouldFearTurrets
 {
-    [StaticConstructorOnStartup]
-    public class PrisonersShouldFearTurrets
+    public static ThoughtDef ObservedTurretDef;
+
+    static PrisonersShouldFearTurrets()
     {
-        public static ThoughtDef ObservedTurretDef;
+        ObservedTurretDef = DefDatabase<ThoughtDef>.GetNamedSilentFail("ObservedTurret");
+        var harmony = new Harmony("Mlie.PrisonersShouldFearTurrets");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
+    }
 
-        static PrisonersShouldFearTurrets()
+
+    public static void LogMessage(string message, bool forced = false, bool warning = false)
+    {
+        if (warning)
         {
-            ObservedTurretDef = DefDatabase<ThoughtDef>.GetNamedSilentFail("ObservedTurret");
-            var harmony = new Harmony("Mlie.PrisonersShouldFearTurrets");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            Log.Warning($"[PrisonersShouldFearTurrets]: {message}");
+            return;
         }
 
-
-        public static void LogMessage(string message, bool forced = false, bool warning = false)
+        if (!forced && !PrisonersShouldFearTurretsMod.instance.Settings.VerboseLogging)
         {
-            if (warning)
-            {
-                Log.Warning($"[PrisonersShouldFearTurrets]: {message}");
-                return;
-            }
-
-            if (!forced && !PrisonersShouldFearTurretsMod.instance.Settings.VerboseLogging)
-            {
-                return;
-            }
-
-            Log.Message($"[PrisonersShouldFearTurrets!]: {message}");
+            return;
         }
+
+        Log.Message($"[PrisonersShouldFearTurrets!]: {message}");
     }
 }
