@@ -6,6 +6,8 @@
 Escaping prisoners will now get fired upon by turrets. 
 
 In 1.3 rebelling slaves will also be shot, selectable in the options.
+There is also an option for shooting at slaves/prisoners in any aggro mental-state
+
 Turrets can also give terror to slaves to keep supression levels.
 	
 ![Image](https://i.imgur.com/O0IIlYj.png)
@@ -25,6 +27,7 @@ https://ko-fi.com/G2G55DDYD]![Image](https://i.imgur.com/Utx6OIH.png)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 

@@ -8,7 +8,7 @@ namespace PrisonersShouldFearTurrets;
 [StaticConstructorOnStartup]
 public class PrisonersShouldFearTurrets
 {
-    public static ThoughtDef ObservedTurretDef;
+    public static readonly ThoughtDef ObservedTurretDef;
 
     static PrisonersShouldFearTurrets()
     {

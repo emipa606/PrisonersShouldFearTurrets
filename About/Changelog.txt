@@ -1,5 +1,8 @@
 # Changelog for PrisonersShouldFearTurrets
 
+1.3.1 - Logging should now be dependent on the mod-setting as it should
+
+
 1.0.3.0 - Added support for autotargeting any slave/prisoner in an aggro mental-state
 
 

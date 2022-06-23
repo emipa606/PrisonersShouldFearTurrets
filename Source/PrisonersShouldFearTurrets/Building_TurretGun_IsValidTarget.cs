@@ -20,7 +20,8 @@ public class Building_TurretGun_IsValidTarget
             return;
         }
 
-        Log.Message($"{p}: {p.mindState.mentalStateHandler.CurStateDef}");
+        PrisonersShouldFearTurrets.LogMessage($"{p}: {p.mindState.mentalStateHandler.CurStateDef}");
+
         var appliesToPawn =
             PrisonersShouldFearTurretsMod.instance.Settings.AppliesForPrisoners && p.IsPrisonerOfColony ||
             PrisonersShouldFearTurretsMod.instance.Settings.AppliesForSlaves && p.IsSlaveOfColony;
