@@ -16,11 +16,6 @@ internal class PrisonersShouldFearTurretsMod : Mod
 
 
     /// <summary>
-    ///     The private settings
-    /// </summary>
-    private PrisonersShouldFearTurretsModSettings settings;
-
-    /// <summary>
     ///     Constructor
     /// </summary>
     /// <param name="content"></param>
@@ -28,29 +23,14 @@ internal class PrisonersShouldFearTurretsMod : Mod
         : base(content)
     {
         instance = this;
-
-        currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(
-                ModLister.GetActiveModWithIdentifier("Mlie.PrisonersShouldFearTurrets"));
+        Settings = GetSettings<PrisonersShouldFearTurretsModSettings>();
+        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     /// <summary>
     ///     The instance-settings for the mod
     /// </summary>
-    internal PrisonersShouldFearTurretsModSettings Settings
-    {
-        get
-        {
-            if (settings == null)
-            {
-                settings = GetSettings<PrisonersShouldFearTurretsModSettings>();
-            }
-
-            return settings;
-        }
-
-        set => settings = value;
-    }
+    internal PrisonersShouldFearTurretsModSettings Settings { get; }
 
     public override string SettingsCategory()
     {
