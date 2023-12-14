@@ -1,5 +1,8 @@
 # Changelog for PrisonersShouldFearTurrets
 
+1.4.3 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044]Combat Extended[/url]
+
+
 1.4.2 - Better save-compatibility, thanks Taranchuk
 
 

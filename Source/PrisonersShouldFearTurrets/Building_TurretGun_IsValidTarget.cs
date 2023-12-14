@@ -1,12 +1,23 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
 namespace PrisonersShouldFearTurrets;
 
-[HarmonyPatch(typeof(Building_TurretGun), "IsValidTarget")]
+[HarmonyPatch]
 public class Building_TurretGun_IsValidTarget
 {
+    private static IEnumerable<MethodBase> TargetMethods()
+    {
+        yield return AccessTools.Method(typeof(Building_TurretGun), "IsValidTarget");
+        if (ModLister.GetActiveModWithIdentifier("CETeam.CombatExtended") != null)
+        {
+            yield return AccessTools.Method("CombatExtended.Building_TurretGunCE:IsValidTarget");
+        }
+    }
+
     [HarmonyPostfix]
     public static void Postfix(Thing t, ref bool __result)
     {
