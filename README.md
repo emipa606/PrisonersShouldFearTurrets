@@ -5,10 +5,12 @@
 
 Escaping prisoners will now get fired upon by turrets. 
 
-In 1.3 rebelling slaves will also be shot, selectable in the options.
+Rebelling slaves will also be shot, selectable in the options.
 There is also an option for shooting at slaves/prisoners in any aggro mental-state
+Turrets can give terror to slaves to keep suppression levels.
+Should work with all turrets unless they implement their own turret logic for finding targets. 
 
-Turrets can also give terror to slaves to keep supression levels.
+Added support for https://steamcommunity.com/sharedfiles/filedetails/?id=2890901044]Combat Extended
 	
 ![Image](https://i.imgur.com/Ds0rBAD.png)
 
