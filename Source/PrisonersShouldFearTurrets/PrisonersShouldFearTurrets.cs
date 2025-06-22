@@ -26,7 +26,7 @@ public class PrisonersShouldFearTurrets
             return;
         }
 
-        if (!forced && !PrisonersShouldFearTurretsMod.instance.Settings.VerboseLogging)
+        if (!forced && !PrisonersShouldFearTurretsMod.Instance.Settings.VerboseLogging)
         {
             return;
         }

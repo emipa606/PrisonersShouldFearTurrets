@@ -11,7 +11,7 @@ internal class PrisonersShouldFearTurretsModSettings : ModSettings
     public bool AppliesForPrisoners = true;
     public bool AppliesForSlaves;
     public bool ApplyTerror;
-    public bool OwnDoor;
+    private bool ownDoor;
     public bool VerboseLogging;
 
     public override void ExposeData()
@@ -22,6 +22,6 @@ internal class PrisonersShouldFearTurretsModSettings : ModSettings
         Scribe_Values.Look(ref AppliesForSlaves, "AppliesForSlaves");
         Scribe_Values.Look(ref AppliesForAggro, "AppliesForAggro");
         Scribe_Values.Look(ref ApplyTerror, "ApplyTerror");
-        Scribe_Values.Look(ref OwnDoor, "OwnDoor");
+        Scribe_Values.Look(ref ownDoor, "OwnDoor");
     }
 }

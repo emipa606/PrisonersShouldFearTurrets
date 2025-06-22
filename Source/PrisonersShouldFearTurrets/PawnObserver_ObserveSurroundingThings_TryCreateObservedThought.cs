@@ -13,7 +13,7 @@ public class PawnObserver_ObserveSurroundingThings_TryCreateObservedThought
     public static void Postfix(Thing thing, Pawn ___pawn,
         ref List<Thought_MemoryObservationTerror> ___terrorThoughts)
     {
-        if (!PrisonersShouldFearTurretsMod.instance.Settings.ApplyTerror)
+        if (!PrisonersShouldFearTurretsMod.Instance.Settings.ApplyTerror)
         {
             return;
         }

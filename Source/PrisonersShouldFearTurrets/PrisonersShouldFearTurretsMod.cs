@@ -10,7 +10,7 @@ internal class PrisonersShouldFearTurretsMod : Mod
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static PrisonersShouldFearTurretsMod instance;
+    public static PrisonersShouldFearTurretsMod Instance;
 
     private static string currentVersion;
 
@@ -22,7 +22,7 @@ internal class PrisonersShouldFearTurretsMod : Mod
     public PrisonersShouldFearTurretsMod(ModContentPack content)
         : base(content)
     {
-        instance = this;
+        Instance = this;
         Settings = GetSettings<PrisonersShouldFearTurretsModSettings>();
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
@@ -45,35 +45,35 @@ internal class PrisonersShouldFearTurretsMod : Mod
     {
         base.DoSettingsWindowContents(rect);
 
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
-        listing_Standard.CheckboxLabeled("PSFT.logging.label".Translate(), ref Settings.VerboseLogging,
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
+        listingStandard.CheckboxLabeled("PSFT.logging.label".Translate(), ref Settings.VerboseLogging,
             "PSFT.logging.tooltip".Translate());
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("PSFT.version.label".Translate(currentVersion));
+            listingStandard.Label("PSFT.version.label".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.Gap();
-        listing_Standard.CheckboxLabeled("PSFT.forprisoners.label".Translate(), ref Settings.AppliesForPrisoners);
-        listing_Standard.CheckboxLabeled("PSFT.forslaves.label".Translate(), ref Settings.AppliesForSlaves);
-        listing_Standard.Gap();
+        listingStandard.Gap();
+        listingStandard.CheckboxLabeled("PSFT.forprisoners.label".Translate(), ref Settings.AppliesForPrisoners);
+        listingStandard.CheckboxLabeled("PSFT.forslaves.label".Translate(), ref Settings.AppliesForSlaves);
+        listingStandard.Gap();
         if (!Settings.AppliesForSlaves && !Settings.AppliesForPrisoners)
         {
-            listing_Standard.Label("PSFT.nothing.label".Translate());
+            listingStandard.Label("PSFT.nothing.label".Translate());
         }
         else
         {
-            listing_Standard.CheckboxLabeled("PSFT.foraggro.label".Translate(), ref Settings.AppliesForAggro);
+            listingStandard.CheckboxLabeled("PSFT.foraggro.label".Translate(), ref Settings.AppliesForAggro);
             if (ModLister.IdeologyInstalled)
             {
-                listing_Standard.CheckboxLabeled("PSFT.applyterror.label".Translate(), ref Settings.ApplyTerror);
+                listingStandard.CheckboxLabeled("PSFT.applyterror.label".Translate(), ref Settings.ApplyTerror);
             }
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 }
