@@ -7,9 +7,9 @@ using Verse;
 namespace PrisonersShouldFearTurrets;
 
 [HarmonyPatch]
-public class Building_TurretGun_IsValidTarget
+public static class Building_TurretGun_IsValidTarget
 {
-    private static IEnumerable<MethodBase> TargetMethods()
+    public static IEnumerable<MethodBase> TargetMethods()
     {
         yield return AccessTools.Method(typeof(Building_TurretGun), "IsValidTarget");
         if (ModLister.GetActiveModWithIdentifier("CETeam.CombatExtended", true) != null)

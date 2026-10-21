@@ -11,8 +11,8 @@ internal class PrisonersShouldFearTurretsModSettings : ModSettings
     public bool AppliesForPrisoners = true;
     public bool AppliesForSlaves;
     public bool ApplyTerror;
-    private bool ownDoor;
     public bool VerboseLogging;
+    private bool ownDoor;
 
     public override void ExposeData()
     {

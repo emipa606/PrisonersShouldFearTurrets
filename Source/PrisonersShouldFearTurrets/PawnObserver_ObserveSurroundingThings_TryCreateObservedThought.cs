@@ -7,9 +7,8 @@ using Verse;
 namespace PrisonersShouldFearTurrets;
 
 [HarmonyPatch(typeof(PawnObserver), "<ObserveSurroundingThings>g__TryCreateObservedThought|7_0")]
-public class PawnObserver_ObserveSurroundingThings_TryCreateObservedThought
+public static class PawnObserver_ObserveSurroundingThings_TryCreateObservedThought
 {
-    [HarmonyPostfix]
     public static void Postfix(Thing thing, Pawn ___pawn,
         ref List<Thought_MemoryObservationTerror> ___terrorThoughts)
     {

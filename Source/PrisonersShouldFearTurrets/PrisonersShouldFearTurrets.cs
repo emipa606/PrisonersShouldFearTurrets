@@ -6,7 +6,7 @@ using Verse;
 namespace PrisonersShouldFearTurrets;
 
 [StaticConstructorOnStartup]
-public class PrisonersShouldFearTurrets
+public static class PrisonersShouldFearTurrets
 {
     public static readonly ThoughtDef ObservedTurretDef;
 

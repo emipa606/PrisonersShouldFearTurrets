@@ -40,13 +40,13 @@ internal class PrisonersShouldFearTurretsMod : Mod
     /// <summary>
     ///     The settings-window
     /// </summary>
-    /// <param name="rect"></param>
-    public override void DoSettingsWindowContents(Rect rect)
+    /// <param name="inRect"></param>
+    public override void DoSettingsWindowContents(Rect inRect)
     {
-        base.DoSettingsWindowContents(rect);
+        base.DoSettingsWindowContents(inRect);
 
         var listingStandard = new Listing_Standard();
-        listingStandard.Begin(rect);
+        listingStandard.Begin(inRect);
         listingStandard.CheckboxLabeled("PSFT.logging.label".Translate(), ref Settings.VerboseLogging,
             "PSFT.logging.tooltip".Translate());
         if (currentVersion != null)
